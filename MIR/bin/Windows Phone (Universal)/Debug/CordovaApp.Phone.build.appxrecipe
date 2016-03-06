@@ -104,6 +104,12 @@
     <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\scripts\index.js">
       <PackagePath>www\scripts\index.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\scripts\jquery-1.11.3.min.js">
+      <PackagePath>www\scripts\jquery-1.11.3.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\scripts\jquery.mobile-1.4.5.min.js">
+      <PackagePath>www\scripts\jquery.mobile-1.4.5.min.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\scripts\platformOverrides.js">
       <PackagePath>www\scripts\platformOverrides.js</PackagePath>
     </AppxPackagedFile>
@@ -115,6 +121,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\css\index.css">
       <PackagePath>www\css\index.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\css\jquery.mobile-1.4.5.min.css">
+      <PackagePath>www\css\jquery.mobile-1.4.5.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\images\police-car-siren.jpg">
+      <PackagePath>www\images\police-car-siren.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\images\spilled-coffee.jpg">
+      <PackagePath>www\images\spilled-coffee.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\Projects\Open Source\MIR\MIR\platforms\windows\www\index.html">
       <PackagePath>www\index.html</PackagePath>
