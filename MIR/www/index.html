@@ -16,16 +16,17 @@
     <title>MIR</title>
 </head>
 <body>
-    <div data-role="page">
+    <div data-role="page" id="homePage">
         <div data-role="header">
-            <h1>MIR</h1>
-            <h4>Mobile Incident Reporter</h4>
+            <h1><strong>MIR</strong></h1>
+            <h5>Mobile Incident Reporter</h5>
         </div>
         <div data-role="content">
+            <a href="#aboutPage">About</a>
             <div name="inc-image">
-                <img src="images/spilled-coffee.jpg" width="200" height="200" />
+                <img src="images/spilled-coffee.jpg" width="200" height="200"/>
             </div>
-            <br />
+            <br/>
             <label for="inc-location">Location</label>
             <select id="inc-location" name="inc-location">
                 <option value="great-court">Great Court</option>
@@ -33,21 +34,39 @@
                 <option value="lifts">Lifts</option>
                 <option value="collonade">Collonade</option>
             </select>
-            <br />
+            <br/>
             <label for="inc-datetime">Date and Time</label>
-            <input id="inc-datetime" name="inc-datetime" size="15" value="" required />
-            <br />
+            <input id="inc-datetime" name="inc-datetime" size="15" value="" required/>
+            <br/>
             <label for="inc-details">Details</label>
             <textarea rows="4" cols="50"></textarea>
-            <br />
+            <br/>
             <button id="inc-submit">Submit Incident</button>
         </div>
         <div data-role="footer">
-            <h4>The British Museum</h4>
+            <h6>The British Museum</h6>
+        </div>
+    </div>
+    <div data-role="page" id="aboutPage">
+        <div data-role="header">
+            <h1><strong>About MIR</strong></h1>
+        </div>
+        <div data-role="content">
+            <p>
+                This tool allows you to report incidents to the Visitor Services team,
+                accompanied by photographs of the issue.
+                <br/>
+                Written by Stephen Moon, 2016
+                <br/>
+                <a href="#homePage">Return to main page</a>
+            </p>
+        </div>
+        <div data-role="footer">
+            <h6>The British Museum</h6>
         </div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
+        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>
