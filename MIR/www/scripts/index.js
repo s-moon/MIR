@@ -5,12 +5,24 @@
 (function () {
     "use strict";
 
-    document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
+    var panel = '<div data-role="panel" data-display="reveal" data-theme="a" id="mypanel">' +
+                '<ul data-role="listview">' +
+                '<li data-icon="home"><a href="index.html" data-transition="slide">Home</a></li>' +
+                '<li data-icon="info"><a href="#aboutPage" data-transition="slide">About</a></li>' +
+                '</ul></div>';
+
+    $(document).one('pagebeforecreate', function () {
+        $.mobile.pageContainer.prepend(panel);
+        $("#mypanel").panel().enhanceWithin();
+    });
+
+    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
+        
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
     };
@@ -22,4 +34,14 @@
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     };
+
+    function setDateAndTime() {
+        var currentdate = new Date();
+        var datetime = "Last Sync: " + currentdate.getDate() + "/"
+                        + (currentdate.getMonth() + 1) + "/"
+                        + currentdate.getFullYear() + " @ "
+                        + currentdate.getHours() + ":"
+                        + currentdate.getMinutes() + ":"
+                        + currentdate.getSeconds();
+    }
 } )();
