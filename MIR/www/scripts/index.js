@@ -43,12 +43,13 @@
 
     function setDateAndTime() {
         var currentdate = new Date();
-        var datetime = currentdate.getDate() + "/"
+        var date = currentdate.getDate() + "/"
                         + (currentdate.getMonth() + 1) + "/"
-                        + currentdate.getFullYear() + " @ "
-                        + currentdate.getHours() + ":"
+                        + currentdate.getFullYear();
+        var time = + currentdate.getHours() + ":"
                         + currentdate.getMinutes() + ":"
-                        + currentdate.getSeconds();
-        document.getElementById('inc-datetime').value = datetime;
+                        + currentdate.getSeconds();;
+        document.getElementById('inc-date').value = date;
+        document.getElementById('inc-time').value = time;
     }
 } )();
