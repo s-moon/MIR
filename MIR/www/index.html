@@ -10,10 +10,12 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <alink href="css/jquery.mobile.flatui.css" rel="stylesheet" />
     <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <title>MIR</title>
 </head>
 <body>
@@ -24,10 +26,10 @@
         </div>
         <div role="main" class="ui-content">
             <div id="inc-image" name="inc-image">
-                
+
             </div>
-            <button id="btnTakePhoto">click</button>
-            <br/>
+            <button id="btnTakePhoto">Take Photo</button>
+            <br />
             <label for="inc-location">Location</label>
             <select id="inc-location" name="inc-location">
                 <option value="great-court">Great Court</option>
@@ -36,17 +38,17 @@
                 <option value="collonade">Collonade</option>
                 <option value="collonade">IS</option>
             </select>
-            <br/>
-            <label for="inc-date">Date</label>
-            <input id="inc-date" name="inc-date" size="10" value="" required/>
+            <br />
+            <label for="inc-date" style="display: inline-block;">Date</label>
+            <a id="btnDatePicker" href="#datePage" class="ui-btn ui-shadow ui-corner-all ui-icon-calendar ui-btn-icon-notext ui-btn-inline"></a>
+            <input id="inc-date" name="inc-date" size="10" value="" required />
             <label for="inc-time">Time</label>
-            <input id="inc-time" name="inc-time" size="8" value="" required />
-            <br/>
+            <input id="inc-time" name="inc-time" size="8" value="" />
+            <br />
             <label for="inc-details">Details</label>
             <textarea rows="4" cols="50"></textarea>
-            <br/>
+            <br />
             <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all">Submit Issue</a>
-            
         </div>
         <div data-role="footer">
             <h6>The British Museum</h6>
@@ -61,7 +63,7 @@
             <p>
                 This tool allows you to report incidents to the Visitor Services team,
                 accompanied by photographs of the issue.
-                <br/>
+                <br />
                 <a href="#homePage" class="ui-btn ui-icon-home ui-btn-icon-left ui-btn-inline ui-corner-all">Home</a>
             </p>
         </div>

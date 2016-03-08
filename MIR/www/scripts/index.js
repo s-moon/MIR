@@ -29,6 +29,8 @@
                 document.getElementById('inc-image').innerHTML = "<img src='" + imageUri + "'style='width: 75%;' />";
             }, null, null);
         }
+
+        
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
     };
