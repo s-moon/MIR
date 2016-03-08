@@ -22,7 +22,7 @@
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
-        
+        setDateAndTime();
         
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
     };
@@ -37,11 +37,12 @@
 
     function setDateAndTime() {
         var currentdate = new Date();
-        var datetime = "Last Sync: " + currentdate.getDate() + "/"
+        var datetime = currentdate.getDate() + "/"
                         + (currentdate.getMonth() + 1) + "/"
                         + currentdate.getFullYear() + " @ "
                         + currentdate.getHours() + ":"
                         + currentdate.getMinutes() + ":"
                         + currentdate.getSeconds();
+        document.getElementById('inc-datetime').value = datetime;
     }
 } )();
