@@ -7,7 +7,7 @@
 
     var panel = '<div data-role="panel" data-display="reveal" data-theme="a" id="mypanel">' +
                 '<ul data-role="listview">' +
-                '<li data-icon="home"><a href="index.html" data-transition="slide">Home</a></li>' +
+                '<li data-icon="home"><a href="#homePage" data-transition="slide">Home</a></li>' +
                 '<li data-icon="info"><a href="#aboutPage" data-transition="slide">About</a></li>' +
                 '</ul></div>';
 

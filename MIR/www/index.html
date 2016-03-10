@@ -25,39 +25,46 @@
             <a href="#mypanel" data-icon="bars" data-iconpos="notext"></a>
         </div>
         <div role="main" class="ui-content">
-            <div id="inc-image" name="inc-image">
+            <div class="ui-field-contain">
+                <div id="inc-image" name="inc-image">
 
+                </div>
+                <button id="btnTakePhoto">Take Photo</button>
             </div>
-            <button id="btnTakePhoto">Take Photo</button>
-            <br />
-            <label for="inc-location">Location</label>
-            <select id="inc-location" name="inc-location">
-                <option value="not-specified">Not Specified</option>
-                <option value="collonade">Collonade</option>
-                <option value="great-court">Great Court</option>
-                <option value="collonade">IS</option>
-                <option value="lifts">Lifts</option>
-                <option value="restaurant">Restaurant</option> 
-            </select>
-            <br />
-            <label for="inc-category">Category</label>
-            <select id="inc-category" name="inc-category">
-                <option value="not-specified">Not Specified</option>
-                <option value="accident">Accident</option>
-                <option value="damage">Damage</option>
-                <option value="missing-object">Missing Object</option>
-                <option value="procedural">Procedural</option>
-            </select>
-            <br />
-            <label for="inc-date" style="display: inline-block;">Date</label>
-            <a id="btnDatePicker" href="#datePage" class="ui-btn ui-shadow ui-corner-all ui-icon-calendar ui-btn-icon-notext ui-btn-inline"></a>
-            <input id="inc-date" name="inc-date" size="10" value="" required />
-            <label for="inc-time">Time</label>
-            <input id="inc-time" name="inc-time" size="8" value="" />
-            <br />
-            <label for="inc-details">Details</label>
-            <textarea rows="4" cols="50"></textarea>
-            <br />
+            <div class="ui-field-contain">
+                <label for="inc-location">Location</label>
+                <select id="inc-location" name="inc-location">
+                    <option value="not-specified">Not Specified</option>
+                    <option value="collonade">Collonade</option>
+                    <option value="great-court">Great Court</option>
+                    <option value="collonade">IS</option>
+                    <option value="lifts">Lifts</option>
+                    <option value="restaurant">Restaurant</option>
+                </select>
+            </div>
+            <div class="ui-field-contain">
+                <label for="inc-category">Category</label>
+                <select id="inc-category" name="inc-category">
+                    <option value="not-specified">Not Specified</option>
+                    <option value="accident">Accident</option>
+                    <option value="damage">Damage</option>
+                    <option value="missing-object">Missing Object</option>
+                    <option value="procedural">Procedural</option>
+                </select>
+            </div>
+            <div class="ui-field-contain">
+                <label for="inc-date" style="display: inline-block;">Date</label>
+                <a id="btnDatePicker" href="#datePage" class="ui-btn ui-shadow ui-corner-all ui-icon-calendar ui-btn-icon-notext ui-btn-inline"></a>
+                <input id="inc-date" name="inc-date" size="10" value="" required />
+            </div>
+            <div class="ui-field-contain">
+                <label for="inc-time">Time</label>
+                <input id="inc-time" name="inc-time" size="8" value="" />
+            </div>
+            <div class="ui-field-contain">
+                <label for="inc-details">Details</label>
+                <textarea rows="4" cols="50"></textarea>
+            </div>
             <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left ui-btn-inline ui-corner-all">Submit Issue</a>
         </div>
         <div data-role="footer" data-position="fixed">
