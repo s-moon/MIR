@@ -18,6 +18,8 @@
 
     document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
+    setDateAndTime();
+
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
@@ -29,9 +31,6 @@
                 document.getElementById('inc-image').innerHTML = "<img src='" + imageUri + "'style='width: 75%;' />";
             }, null, null);
         }
-
-        
-        
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
     };
 
@@ -45,12 +44,11 @@
 
     function setDateAndTime() {
         var currentdate = new Date();
-        var date = currentdate.getDate() + "/"
-                        + (currentdate.getMonth() + 1) + "/"
-                        + currentdate.getFullYear();
-        var time = + currentdate.getHours() + ":"
-                        + currentdate.getMinutes() + ":"
-                        + currentdate.getSeconds();;
+        var date = currentdate.getFullYear() + "-"
+                        + (currentdate.getMonth() + 1) + "-"
+                        + currentdate.getDate();
+        var time = currentdate.getHours() + ":"
+                        + currentdate.getMinutes();
         document.getElementById('inc-date').value = date;
         document.getElementById('inc-time').value = time;
     }

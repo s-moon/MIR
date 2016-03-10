@@ -11,10 +11,9 @@
     <meta name="viewport" content="initial-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="scripts/jquery-1.11.3.min.js"></script>
     <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     <title>MIR</title>
 </head>
@@ -34,7 +33,7 @@
             <div class="ui-field-contain">
                 <label for="inc-category">Category</label>
                 <select id="inc-category" name="inc-category">
-                    <option value="not-specified">Not Specified</option>
+                    <option value="">Not Specified</option>
                     <option value="accident">Accident</option>
                     <option value="damage">Damage</option>
                     <option value="missing-object">Missing Object</option>
@@ -44,7 +43,7 @@
             <div class="ui-field-contain">
                 <label for="inc-location">Location</label>
                 <select id="inc-location" name="inc-location">
-                    <option value="not-specified">Not Specified</option>
+                    <option value="">Not Specified</option>
                     <option value="collonade">Collonade</option>
                     <option value="great-court">Great Court</option>
                     <option value="collonade">IS</option>
@@ -55,7 +54,7 @@
             <div class="ui-field-contain">
                 <label for="inc-date" style="display: inline-block;">Date</label>
                 <a id="btnDatePicker" href="#datePage" class="ui-btn ui-shadow ui-corner-all ui-icon-calendar ui-btn-icon-notext ui-btn-inline"></a>
-                <input id="inc-date" name="inc-date" size="10" value="" required />
+                <input id="inc-date" name="inc-date" size="10" value="2016-03-09" required />
             </div>
             <div class="ui-field-contain">
                 <label for="inc-time">Time</label>
