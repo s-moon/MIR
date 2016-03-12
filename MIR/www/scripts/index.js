@@ -20,17 +20,16 @@
 
     setDateAndTime();
 
+    document.getElementById('btnTakePhoto').onclick = function () {
+        navigator.camera.getPicture(function (imageUri) {
+            document.getElementById('inc-image').innerHTML = "<img src='" + imageUri + "'style='width: 250px; height: 250px;' />";
+        }, null, null);
+    }
+
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
-        setDateAndTime();
-
-        document.getElementById('btnTakePhoto').onclick = function () {
-            navigator.camera.getPicture(function (imageUri) {
-                document.getElementById('inc-image').innerHTML = "<img src='" + imageUri + "'style='width: 75%;' />";
-            }, null, null);
-        }
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
     };
 
