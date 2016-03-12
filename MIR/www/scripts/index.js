@@ -20,10 +20,20 @@
 
     setDateAndTime();
 
+    function onSuccess(imageData) {
+        var image = document.getElementById('inc-image');
+        image.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
+
     document.getElementById('btnTakePhoto').onclick = function () {
-        navigator.camera.getPicture(function (imageUri) {
-            document.getElementById('inc-image').innerHTML = "<img src='" + imageUri + "'style='width: 250px; height: 250px;' />";
-        }, null, null);
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 50,
+            destinationType: Camera.DestinationType.DATA_URL
+        });
     }
 
     function onDeviceReady() {
