@@ -33,8 +33,10 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
+        //app.receivedEvent('deviceready');
+    }
+    /*
+    ,
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -46,18 +48,8 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+    */
 };
-
-function setDateAndTime() {
-    var currentdate = new Date();
-    var date = currentdate.getFullYear() + "-"
-        + (currentdate.getMonth() + 1) + "-"
-        + currentdate.getDate();
-    var time = currentdate.getHours() + ":"
-        + currentdate.getMinutes();
-    document.getElementById('inc-date').value = date;
-    document.getElementById('inc-time').value = time;
-}
 
 setDateAndTime();
 
@@ -71,3 +63,14 @@ $(document).one('pagebeforecreate', function () {
     $.mobile.pageContainer.prepend(panel);
     $("#mypanel").panel().enhanceWithin();
 });
+
+function setDateAndTime() {
+    var currentdate = new Date();
+    var date = currentdate.getFullYear() + "-"
+        + (currentdate.getMonth() + 1) + "-"
+        + currentdate.getDate();
+    var time = ("0" + currentdate.getHours()).slice(-2) + ":"
+        + ("0" + currentdate.getMinutes()).slice(-2);
+    $("#inc-date").val(date);
+    $("#inc-time").val(time);
+}
