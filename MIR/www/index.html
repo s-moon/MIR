@@ -35,48 +35,51 @@
     <body>
     <div data-role="page" id="homePage">
         <div data-role="header">
-            <h1><strong>MIR</strong></h1>
+            <h1><strong>MIR2</strong></h1>
             <a href="#mypanel" data-icon="bars" data-iconpos="notext">fff</a>
         </div>
         <div role="main" class="ui-content">
-            <div class="centre-component ui-field-contain">
-                <img id="Incident" name="Incident" src="img/Icons8-Windows-8-Photo-Video-Camera.ico" width="200" height="200"/>
-                <button id="btnTakePhoto">Take Photo</button>
-            </div>
-            <div class="ui-field-contain">
-                <label for="Category">Category</label>
-                <select id="Category" name="Category">
-                    <option value="">Not Specified</option>
-                    <option value="accident">Accident</option>
-                    <option value="damage">Damage</option>
-                    <option value="missing-object">Missing Object</option>
-                    <option value="procedural">Procedural</option>
-                </select>
-            </div>
-            <div class="ui-field-contain">
-                <label for="Location">Location</label>
-                <select id="Location" name="inc-location">
-                    <option value="">Not Specified</option>
-                    <option value="collonade">Collonade</option>
-                    <option value="great-court">Great Court</option>
-                    <option value="collonade">IS</option>
-                    <option value="lifts">Lifts</option>
-                    <option value="restaurant">Restaurant</option>
-                </select>
-            </div>
-            <div class="ui-field-contain">
-                <label for="IncidentDate" style="display: inline-block;">Date</label>
-                <input id="IncidentDate" name="IncidentDate" size="10" value="" required />
-            </div>
-            <div class="ui-field-contain">
-                <label for="IncidentTime">Time</label>
-                <input id="IncidentTime" name="IncidentTime" size="10" value="" />
-            </div>
-            <div class="ui-field-contain">
-                <label for="Details">Details</label>
-                <textarea id="Details" name="Details" rows="4" cols="50"></textarea>
-            </div>
-            <a href="#" class="centre-component ui-btn ui-icon-plus ui-btn-icon-left ui-corner-all">Submit Issue</a>
+            <form action="http://localhost:4537/Incident" method=post">
+                <div class="centre-component ui-field-contain">
+                    <img id="Incident" name="Incident" src="img/Icons8-Windows-8-Photo-Video-Camera.ico" width="200"
+                         height="200"/>
+                    <button id="btnTakePhoto">Take Photo</button>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="Category">Category</label>
+                    <select id="Category" name="Category">
+                        <option value="">Not Specified</option>
+                        <option value="accident">Accident</option>
+                        <option value="damage">Damage</option>
+                        <option value="missing-object">Missing Object</option>
+                        <option value="procedural">Procedural</option>
+                    </select>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="Location">Location</label>
+                    <select id="Location" name="Location">
+                        <option value="">Not Specified</option>
+                        <option value="collonade">Collonade</option>
+                        <option value="great-court">Great Court</option>
+                        <option value="collonade">IS</option>
+                        <option value="lifts">Lifts</option>
+                        <option value="restaurant">Restaurant</option>
+                    </select>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="IncidentDate" style="display: inline-block;">Date</label>
+                    <input id="IncidentDate" name="IncidentDate" size="10" value="" required/>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="IncidentTime">Time</label>
+                    <input id="IncidentTime" name="IncidentTime" size="10" value=""/>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="Details">Details</label>
+                    <textarea id="Details" name="Details" rows="4" cols="50"></textarea>
+                </div>
+                <input type="sumbit" value="Submit Issue">
+            </form>
         </div>
         <div data-role="footer" data-position="fixed">
             <h6>The British Museum</h6>
