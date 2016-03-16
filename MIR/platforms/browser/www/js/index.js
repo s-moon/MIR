@@ -71,6 +71,6 @@ function setDateAndTime() {
         + currentdate.getDate();
     var time = ("0" + currentdate.getHours()).slice(-2) + ":"
         + ("0" + currentdate.getMinutes()).slice(-2);
-    $("#inc-date").val(date);
-    $("#inc-time").val(time);
+    $("#IncidentDate").val(date);
+    $("#IncidentTime").val(time);
 }
