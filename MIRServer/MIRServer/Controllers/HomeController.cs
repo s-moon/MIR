@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MIRServer.Infrastructure;
 using MIRServer.Models;
 
 namespace MIRServer.Controllers
@@ -16,8 +17,9 @@ namespace MIRServer.Controllers
         }
 
         [HttpPost]
-        public ViewResult Incident(Incident incident)
+        public ViewResult Index(Incident incident)
         {
+            Email.sendTheEmail();
             return View();
         }
     }
