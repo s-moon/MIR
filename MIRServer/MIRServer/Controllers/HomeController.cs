@@ -19,7 +19,7 @@ namespace MIRServer.Controllers
         [HttpPost]
         public ViewResult Index(Incident incident)
         {
-            Email.sendTheEmail();
+            Email.emailIncident(incident);
             return View();
         }
     }
