@@ -17,10 +17,10 @@ namespace MIRServer.Controllers
         }
 
         [HttpPost]
-        public ViewResult Index(Incident incident)
+        public ActionResult Index(Incident incident)
         {
             Email.emailIncident(incident);
-            return View();
+            return Redirect(Request.UrlReferrer.ToString());
         }
     }
 }
