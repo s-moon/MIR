@@ -6,4 +6,4 @@ Recording and reporting what happens usually involves a form to fill in, but wou
 
 Welcome to MIR.
 
-Stephen Moon (stephen@moonsolutions.co.uk), 2016
+Stephen Moon (stephen@logicalmoon.com), 2016
