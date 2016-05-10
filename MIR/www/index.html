@@ -39,11 +39,9 @@
             <a href="#mypanel" data-icon="bars" data-iconpos="notext">fff</a>
         </div>
         <div role="main" class="ui-content">
-            <form action="http://localhost:4537/Incident" method=post">
-                <div class="centre-component ui-field-contain">
-                    <img id="Incident" name="Incident" src="img/Icons8-Windows-8-Photo-Video-Camera.ico" width="200"
-                         height="200"/>
-                    <button id="btnTakePhoto">Take Photo</button>
+            <form action="http://mirserver20160504113330.azurewebsites.net/api/incidents" method="post">
+                <div data-role="content" id="content">
+                    <h1>Report a BM Incident</h1>
                 </div>
                 <div class="ui-field-contain">
                     <label for="Category">Category</label>
@@ -78,7 +76,13 @@
                     <label for="Details">Details</label>
                     <textarea id="Details" name="Details" rows="4" cols="50"></textarea>
                 </div>
-                <input type="sumbit" value="Submit Issue">
+                <div class="ui-content" id="popupCloseLeft" style="max-width: 280px;" data-role="popup">
+                    <a class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left" href="#" data-rel="back">Close</a>
+                    <p>I have a close button at the top left corner with simple HTML markup.</p>
+                </div>
+
+                <input type="submit" value="Submit Issue">
+                <button type="reset" value="Reset">RESET</button>
             </form>
         </div>
         <div data-role="footer" data-position="fixed">
@@ -93,12 +97,8 @@
         </div>
         <div data-role="content">
             <p>
-                This tool allows you to report incidents to the Visitor Services team,
-                accompanied by photographs of the issue.
+                This tool allows you to report incidents to the Visitor Services team.
             </p>
-            <p>
-                After taking a photograph and filling in the fields, please click on the Submit Issue button.
-                </p>
             <p>
                 Brought to you by Business Information Services at the British Museum.
                 <br/>
