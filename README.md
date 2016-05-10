@@ -12,7 +12,7 @@ Welcome to MIR.
 
 #### Technologies Used
 * C#
-* ASP.NET Web API
+* ASP.NET Web API (on Azure)
 * SendGrid
 * HTML5
 * jQuery
