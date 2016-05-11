@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <title>MIR</title>
+    </head>
+    <body>
+    <div data-role="page" id="homePage">
+        <div data-role="header">
+            <h1><strong>MIR</strong></h1>
+            <a href="#mypanel" data-icon="bars" data-iconpos="notext">fff</a>
+        </div>
+        <div role="main" class="ui-content">
+            <form action="http://mirserver20160504113330.azurewebsites.net/api/incidents" method="post">
+                <div data-role="content" id="content">
+                    <h1>Report a BM Incident</h1>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="Category">Category</label>
+                    <select id="Category" name="Category">
+                        <option value="">Not Specified</option>
+                        <option value="accident">Accident</option>
+                        <option value="damage">Damage</option>
+                        <option value="missing-object">Missing Object</option>
+                        <option value="procedural">Procedural</option>
+                    </select>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="Location">Location</label>
+                    <select id="Location" name="Location">
+                        <option value="">Not Specified</option>
+                        <option value="collonade">Collonade</option>
+                        <option value="great-court">Great Court</option>
+                        <option value="collonade">IS</option>
+                        <option value="lifts">Lifts</option>
+                        <option value="restaurant">Restaurant</option>
+                    </select>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="IncidentDate" style="display: inline-block;">Date</label>
+                    <input id="IncidentDate" name="IncidentDate" size="10" value="" required/>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="IncidentTime">Time</label>
+                    <input id="IncidentTime" name="IncidentTime" size="10" value=""/>
+                </div>
+                <div class="ui-field-contain">
+                    <label for="Details">Details</label>
+                    <textarea id="Details" name="Details" rows="4" cols="50"></textarea>
+                </div>
+                <div class="ui-content" id="popupCloseLeft" style="max-width: 280px;" data-role="popup">
+                    <a class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-left" href="#" data-rel="back">Close</a>
+                    <p>I have a close button at the top left corner with simple HTML markup.</p>
+                </div>
+
+                <input type="submit" value="Submit Issue">
+                <button type="reset" value="Reset">RESET</button>
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h6>The British Museum</h6>
+        </div>
+    </div>
+    <div data-role="page" id="aboutPage">
+        <div data-role="header">
+            <h1><strong>About MIR</strong></h1>
+            <h6>Version 1.0</h6>
+            <a href="#mypanel" data-icon="bars" data-iconpos="notext"></a>
+        </div>
+        <div data-role="content">
+            <p>
+                This tool allows you to report incidents to the Visitor Services team.
+            </p>
+            <p>
+                Brought to you by Business Information Services at the British Museum.
+                <br/>
+                <a href="#homePage" class="ui-btn ui-icon-home ui-btn-icon-left ui-corner-all" data-transition="slide">Home</a>
+            </p>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h6>The British Museum</h6>
+        </div>
+    </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
