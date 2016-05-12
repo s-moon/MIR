@@ -17,5 +17,6 @@ Welcome to MIR.
 * HTML5
 * jQuery
 * jQuery Mobile
+* PhoneGap
 
 Stephen Moon (stephen@logicalmoon.com), 2016
