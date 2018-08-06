@@ -10,6 +10,8 @@ receive such reports.
 
 Welcome to MIR.
 
+![MIR main screen][mir-screen.PNG]
+
 #### Technologies Used
 * C#
 * ASP.NET Web API (on Azure)
