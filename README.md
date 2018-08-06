@@ -10,7 +10,7 @@ receive such reports.
 
 Welcome to MIR.
 
-![MIR main screen][mir-screen.PNG]
+![MIR main screen](mir-screen.PNG)
 
 #### Technologies Used
 * C#
